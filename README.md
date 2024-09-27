@@ -8,7 +8,7 @@ This repository contains various Python scripts that demonstrate basic automatio
 1. **DomainProbe.py**
 2. **File_hash.py**
 3. **Password_Strength_Checker.py**
-4. **URL_Checker.py** (VirusTotal URL Reputation Checker)
+4. **VT_URL_Checker.py** (VirusTotal URL Reputation Checker)
 
 ---
 
@@ -68,7 +68,7 @@ Input a password, and the script will return a strength analysis based on the cr
 
 ---
 
-### 4. URL_Checker.py
+### 4. VT_URL_Checker.py
 
 **Description:**
 This script uses the VirusTotal API to check the reputation of a URL. It sends the URL to VirusTotal and retrieves how many antivirus engines have flagged the URL as malicious.
@@ -80,7 +80,7 @@ This script uses the VirusTotal API to check the reputation of a URL. It sends t
    ```
 2. Run the script:
    ```bash
-   python URL_Checker.py
+   python VT_URL_Checker.py
    ```
 3. Input the URL you'd like to check.
 
