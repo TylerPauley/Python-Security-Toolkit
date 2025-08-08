@@ -1,120 +1,107 @@
+# Python Security Toolkit
 
-# Cybersecurity Python Scripts
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python Version](https://img.shields.io/badge/python-3.9+-brightgreen.svg)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
-This repository contains various Python scripts that demonstrate basic automation and utilize APIs for cybersecurity-related tasks. Below is a description of each script along with instructions on how to run them.
-
-## Scripts Included
-
-1. **DomainProbe.py**
-2. **File_hash.py**
-3. **Password_Strength_Checker.py**
-4. **VT_URL_Checker.py** (VirusTotal URL Reputation Checker)
-5. **PortGuesser.py**
+A versatile collection of Python scripts designed for security analysis, reconnaissance, and educational purposes. This toolkit is built to be simple, effective, and easily extensible.
 
 ---
 
-### 1. DomainProbe.py
+## 🚀 About The Project
 
-**Description:**
-This script provides multiple functionalities for analyzing websites, such as:
-- Retrieving the website's IP address.
-- Performing an MX (Mail Exchange) DNS lookup.
-- Conducting a WHOIS lookup for domain registration information.
-- Checking the website's status (HTTP/HTTPS).
-- Performing banner grabbing from open ports (80 and 443).
-
-**Usage:**
-```bash
-python DomainProbe.py
-```
-Follow the prompts to enter a domain, and select the desired operation or choose to run all checks at once.
-
-**Requirements:**
-- `whois`, `requests`, `dns.resolver`, and `socket` libraries.
+This repository was created to bring together a variety of useful scripts for cybersecurity enthusiasts, students, and professionals. Whether you're analyzing a domain, checking file integrity, or practicing your knowledge of network protocols, these tools are designed to help. The focus is on clean, readable code that can be used for practical tasks and serve as a learning resource.
 
 ---
 
-### 2. File_hash.py
+## ✨ Features
 
-**Description:**
-This script generates MD5, SHA1, and SHA256 checksums for files. It's useful for verifying file integrity and checking for file tampering.
-
-**Usage:**
-```bash
-python File_hash.py
-```
-You will be prompted to enter the file name. Make sure the file is in the same directory as the script, or provide the correct file path.
-
-**Requirements:**
-- `hashlib`, `os` libraries.
+-   **Domain Analysis**: Perform DNS, WHOIS, and MX lookups.
+-   **Threat Intelligence**: Check URL reputations against the VirusTotal API.
+-   **File Integrity**: Calculate MD5, SHA1, and SHA256 checksums for any file.
+-   **Password Security**: Analyze password strength against common criteria.
+-   **Educational Tools**: Includes a gamified quiz to help memorize common network ports.
 
 ---
 
-### 3. Password_Strength_Checker.py
+## 🧰 The Toolkit
 
-**Description:**
-This script checks the strength of a password based on common patterns and conditions like:
-- Minimum length.
-- Presence of lowercase, uppercase letters, numbers, and special characters.
-- Identifies weak patterns such as consecutive characters or repeated sequences.
-
-**Usage:**
-```bash
-python Password_Strength_Checker.py
-```
-Input a password, and the script will return a strength analysis based on the criteria mentioned.
-
-**Requirements:**
-- None (uses basic Python functions).
+| Script                  | Description                                                                  | Key Libraries        |
+| :---------------------- | :--------------------------------------------------------------------------- | :------------------- |
+| `domain_analyzer.py`      | Gathers intelligence on a domain, including IP, WHOIS, and MX records.       | `whois`, `dns.resolver` |
+| `virustotal_checker.py` | Checks a URL's reputation using the VirusTotal API.                        | `requests`           |
+| `file_checksum.py`      | Generates MD5, SHA1, and SHA256 hashes to verify file integrity.             | `hashlib`            |
+| `password_strength.py`  | Evaluates a password's strength based on length, complexity, and patterns.   | (standard libraries) |
+| `port_quiz.py`          | An interactive command-line game to help memorize network ports and services. | `random`             |
 
 ---
 
-### 4. VT_URL_Checker.py
+## ⚙️ Getting Started
 
-**Description:**
-This script uses the VirusTotal API to check the reputation of a URL. It sends the URL to VirusTotal and retrieves how many antivirus engines have flagged the URL as malicious.
+Follow these instructions to get a copy of the project up and running on your local machine.
 
-**Usage:**
-1. Add your VirusTotal API key in a separate file `API_Keys.py` in the format:
-   ```python
-   VT_API_KEY = 'your_virustotal_api_key'
-   ```
-2. Run the script:
-   ```bash
-   python VT_URL_Checker.py
-   ```
-3. Input the URL you'd like to check.
+### Prerequisites
 
-**Requirements:**
-- `requests` library.
-- VirusTotal API key (Free API keys allow limited requests per minute).
+-   Python 3.9 or later
+-   `pip` package manager
 
----
+### Installation
 
-## Installation
+1.  **Clone the repository:**
 
-To use these scripts, make sure you have Python installed. You can install the necessary libraries using `pip`:
+    ```
+    git clone [https://github.com/TylerPauley/Python-Security-Toolkit.git](https://github.com/TylerPauley/Python-Security-Toolkit.git)
+    cd Python-Security-Toolkit
+    ```
 
-```bash
-pip install requests python-whois dnspython
-```
+2.  **Install the required libraries:**
+    It is recommended to use a virtual environment.
 
-Clone the repository:
+    ```
+    pip install -r requirements.txt
+    ```
 
-```bash
-git clone https://github.com/TylerPauley/pythonScripts.git
-```
+3.  **Set up your API Key (for `virustotal_checker.py`):**
+    -   Create a file named `api_keys.py`.
+    -   Inside the file, add your VirusTotal API key like this:
 
-Navigate to the repository directory and run any of the scripts using Python.
+        ```
+        VT_API_KEY = 'your_virustotal_api_key_here'
+        ```
 
 ---
 
-## Contributing
+## ▶️ Usage
 
-Feel free to submit issues or pull requests if you find any bugs or have suggestions for improvement.
+Navigate to the repository directory and run any script using Python.
+
+**Example: Running the Domain Analyzer**
+python domain_analyzer.py
+
+The script will then prompt you for the necessary inputs.
 
 ---
 
-## License
+## 🤝 Contributing
 
-This repository is licensed under the MIT License.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## 📧 Contact
+
+Tyler Pauley - [LinkedIn](https://linkedin.com/in/tylerpauleysecurity) - [GitHub Profile](https://github.com/TylerPauley)
