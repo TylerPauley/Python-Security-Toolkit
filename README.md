@@ -9,6 +9,7 @@ This repository contains various Python scripts that demonstrate basic automatio
 2. **File_hash.py**
 3. **Password_Strength_Checker.py**
 4. **VT_URL_Checker.py** (VirusTotal URL Reputation Checker)
+5. **PortGuesser.py**
 
 ---
 
